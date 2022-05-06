@@ -126,17 +126,31 @@
 
   }
 
-  // class 同样可以使用 type 
+  //  
   type Point2 = {
     x: number;
     y: number;
   };
   class SomePoint2 implements Point2 {
-    x: number;
-    y: number
-    constructor(x: number, y: number) {
-      this.x = x;
-      this.y = y;
-    }
+    x = 1;
+    y = 2;
   }
+
+  // type PartialPointB = { x: number } | { y: number };
+  // class SomePartialPointC implements PartialPointB { // Error, 但类不能实现使⽤类型别名定义的联合类型：  type 的 | 和 & 这些联合声明 
+  //   x = 1;
+  //   y = 2;
+  // }
+
+
+  // 与类型别名不同，接⼝可以定义多次，会被⾃动合并为单个接⼝。
+
+  interface A {
+    x: number;
+  }
+  interface A {
+    y: number;
+  }
+
+  const testA: A = { x: 1, y: 123 }
 })()
