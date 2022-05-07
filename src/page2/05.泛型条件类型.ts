@@ -45,5 +45,4 @@
   type extractStringPromise = UnPromisify<typeof stringPromise>  // string 
   type extractPersonPromise = UnPromisify<typeof personPromise>  // Person
 
-  // page 64 
 })()
