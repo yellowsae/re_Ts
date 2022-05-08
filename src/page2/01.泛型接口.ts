@@ -1,4 +1,7 @@
 (() => {
+
+  // 泛型接口， 在项目中比较常用
+  // 就是定义接口使用 使用 泛型约束 属性类型
   interface Identities<V, M> {
     value: V
     message: M

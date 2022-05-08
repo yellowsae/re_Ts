@@ -6,7 +6,10 @@
   interface A<T = string> {
     name: T
   }
+  // 没有指定 A 泛型的类型，默认就使用了 string
   const strA: A = {name: '123'};
+
+  // 制定了 泛型 T 的类型为 number 类型
   const strB: A<number> = {name: 123};
 
   /**

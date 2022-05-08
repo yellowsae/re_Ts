@@ -1,4 +1,10 @@
 (() => {
+
+  // 使用泛型约束类 
+  // 项目中常见
+  //  class xxx implements interfaceName<T>
+
+  
   interface GenericInterface<U> {
     value: U
     getIdentity: () => U
