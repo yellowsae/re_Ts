@@ -10,7 +10,7 @@
 
   // in 表示使用 for...in 变量
   type UserReadonly<T> = {
-    readonly [P in keyof T]: T[P]
+    readonly [P in keyof T]: T[P]  // 设置返回值类型 User["name"] 
   }
 
   const user: UserReadonly<User> = {
